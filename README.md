@@ -6,7 +6,7 @@ The message can be changed using a config map.
 
 * [Source](https://github.com/spring-cloud/spring-cloud-kubernetes/tree/master/spring-cloud-kubernetes-examples/kubernetes-reload-example)
 * [restdocs](https://docs.spring.io/spring-restdocs/docs/current/reference/html5/)
-
+* [spring-restdocs](https://github.com/spring-projects/spring-restdocs/blob/master/docs/src/docs/asciidoc/getting-started.adoc#setting-up-your-junit-5-tests)
 
 ### 1. Add a k8s ConfigMap: 
 
