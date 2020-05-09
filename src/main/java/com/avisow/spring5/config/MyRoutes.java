@@ -9,15 +9,23 @@ import org.springframework.web.reactive.function.server.RouterFunction;
 import org.springframework.web.reactive.function.server.RouterFunctions;
 import org.springframework.web.reactive.function.server.ServerResponse;
 
+import static org.springframework.web.reactive.function.BodyInserters.fromValue;
+import static org.springframework.web.reactive.function.server.RequestPredicates.GET;
+import static org.springframework.web.reactive.function.server.ServerResponse.ok;
+
 @Configuration
-public class GreetingRouter {
+public class MyRoutes {
 
     @Bean
-    public RouterFunction<ServerResponse> route(GreetingHandler greetingHandler) {
+    RouterFunction<ServerResponse> home() {
+        return RouterFunctions.route(GET("/"), request -> ok().body(fromValue("Home page")));
+    }
+
+    @Bean
+    public RouterFunction<ServerResponse> hello(GreetingHandler greetingHandler) {
 
         return RouterFunctions.route(
-                RequestPredicates
-                .GET("/hello")
+                GET("/hello")
                 .and(
                     RequestPredicates.accept(MediaType.TEXT_PLAIN)
                 ),
