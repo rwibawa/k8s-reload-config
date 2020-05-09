@@ -19,6 +19,9 @@
 		<spring-cloud.version>Hoxton.SR4</spring-cloud.version>
 		<spring-cloud-starter-kubernetes-config.version>1.1.2.RELEASE</spring-cloud-starter-kubernetes-config.version>
 		<fabric8.maven.plugin.version>4.4.0</fabric8.maven.plugin.version>
+
+		<spring-restdocs.version>2.0.4.RELEASE</spring-restdocs.version>
+		<spring-test.version>5.0.1.RELEASE</spring-test.version>
 	</properties>
 
 	<dependencies>
@@ -74,6 +77,7 @@
 			<optional>true</optional>
 		</dependency>
 <!--
+
 		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
@@ -101,11 +105,26 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+
 		<dependency>
-			<groupId>io.projectreactor</groupId>
-			<artifactId>reactor-test</artifactId>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>${spring-test.version}</version>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.restdocs</groupId>
+			<artifactId>spring-restdocs-webtestclient</artifactId>
+			<version>${spring-restdocs.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.restdocs</groupId>
+			<artifactId>spring-restdocs-asciidoctor</artifactId>
+			<version>${spring-restdocs.version}</version>
+			<scope>test</scope>
+		</dependency>
+
 	</dependencies>
 
 	<dependencyManagement>
