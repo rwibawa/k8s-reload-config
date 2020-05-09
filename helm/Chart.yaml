@@ -1,0 +1,10 @@
+---
+name: k8s-reload-config
+home: https://projects.spring.io/spring-boot/#/spring-boot-starter-parent/k8s-reload-config
+sources:
+- https://github.com/spring-projects/spring-boot/spring-boot-starter-parent/k8s-reload-config
+version: 0.0.1-SNAPSHOT
+description: k8s config map auto reload
+maintainers:
+- name: Pivotal
+  email: info@pivotal.io
