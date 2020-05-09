@@ -1,0 +1,4 @@
+[source,bash]
+----
+$ curl 'https://www.avisow.com/employees/1' -i -X GET
+----

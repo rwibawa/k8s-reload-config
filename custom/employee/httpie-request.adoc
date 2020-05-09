@@ -1,0 +1,4 @@
+[source,bash]
+----
+$ http GET 'https://www.avisow.com/employees/1'
+----

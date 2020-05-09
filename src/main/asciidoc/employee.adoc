@@ -1,0 +1,33 @@
+= Spring REST Docs WebTestClient Sample
+Andy Wilkinson;
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+
+Sample application demonstrating how to use Spring REST Docs with Spring Framework's
+WebTestClient.
+
+`SampleWebTestClientApplicationTests` makes a call to a very simple service. Six
+snippets are produced. One showing how to make a request using cURL:
+
+include::{snippets}/employee/curl-request.adoc[]
+
+One showing how to make a request using HTTPie:
+
+include::{snippets}/employee/httpie-request.adoc[]
+
+One showing the HTTP request:
+
+include::{snippets}/employee/http-request.adoc[]
+
+One showing the request body:
+
+include::{snippets}/employee/request-body.adoc[]
+
+One showing the HTTP response:
+
+include::{snippets}/employee/http-response.adoc[]
+
+And one showing the response body:
+
+include::{snippets}/employee/response-body.adoc[]
