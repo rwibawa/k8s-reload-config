@@ -12,6 +12,10 @@ import org.springframework.restdocs.RestDocumentationExtension;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.reactive.server.WebTestClient;
 
+import static org.springframework.restdocs.hypermedia.HypermediaDocumentation.linkWithRel;
+import static org.springframework.restdocs.hypermedia.HypermediaDocumentation.links;
+import static org.springframework.restdocs.payload.PayloadDocumentation.*;
+import static org.springframework.restdocs.webtestclient.WebTestClientRestDocumentation.document;
 import static org.springframework.restdocs.webtestclient.WebTestClientRestDocumentation.documentationConfiguration;
 
 @ExtendWith(SpringExtension.class)
@@ -28,19 +32,21 @@ class Spring5ApplicationTests {
 	public void setUp(ApplicationContext applicationContext,
 					  RestDocumentationContextProvider restDocumentation) {
 		this.webTestClient = WebTestClient.bindToApplicationContext(applicationContext)
-				.configureClient()
-				.filter(documentationConfiguration(restDocumentation))
-				.build();
+			.configureClient()
+			.baseUrl("https://www.avisow.com")
+			.filter(documentationConfiguration(restDocumentation))
+			.build();
 	}
 
 	@Test
 	public void testHomepage() {
 		webTestClient
-				.get().uri("/")
-				.accept(MediaType.TEXT_PLAIN)
-				.exchange()
-				.expectStatus().isOk()
-				.expectBody(String.class).isEqualTo("Home page");
+			.get().uri("/")
+			.accept(MediaType.TEXT_PLAIN)
+			.exchange()
+			.expectStatus().isOk()
+			.expectBody(String.class).isEqualTo("Home page")
+			.consumeWith(document("index", responseBody()));
 	}
 
 	@Test

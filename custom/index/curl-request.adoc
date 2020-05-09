@@ -1,0 +1,5 @@
+[source,bash]
+----
+$ curl 'https://www.avisow.com/' -i -X GET \
+    -H 'Accept: text/plain'
+----

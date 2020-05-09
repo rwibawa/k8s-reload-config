@@ -5,6 +5,8 @@ The application consists of a timed bean that periodically prints a message to t
 The message can be changed using a config map.
 
 * [Source](https://github.com/spring-cloud/spring-cloud-kubernetes/tree/master/spring-cloud-kubernetes-examples/kubernetes-reload-example)
+* [restdocs](https://docs.spring.io/spring-restdocs/docs/current/reference/html5/)
+
 
 ### 1. Add a k8s ConfigMap: 
 

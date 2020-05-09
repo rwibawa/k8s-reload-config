@@ -1,0 +1,5 @@
+[source,bash]
+----
+$ http GET 'https://www.avisow.com/' \
+    'Accept:text/plain'
+----
