@@ -27,7 +27,7 @@ A sample config map is provided with this example in the *config-map.yml* file.
 
 To deploy the config map, just run the following command on Kubernetes:
 
-``` shell script
+``` bash session
 $ alias kc="kubectl"
 $ kc create -f config-map.yml
 ```
@@ -35,7 +35,7 @@ $ kc create -f config-map.yml
 As soon as the config map is deployed, the output of the application changes accordingly.
 The config map can be now edited with the following command:
 
-```
+``` bash session
 $ kc edit configmap reload-example
 ```
 
@@ -86,7 +86,7 @@ The property name (*"bean.message"*) matches the `MyConfig.java` configuration p
 Once you have your environment set up, you can deploy the application using the fabric8 maven plugin:
 
 ### Command line
-``` shell script
+``` bash session
 $ ./mvnw clean package fabric8:build fabric8:helm -Pkubernetes -DskipTests=true
 
 ## helm configuration
@@ -126,7 +126,7 @@ release "spring-cloud-kubernetes-example-reload" uninstalled
 ```
 
 Example Output:
-```shell script
+```bash session
 $ kc create -f config-map.yml 
 configmap/reload-example created
 $ kc get cm
@@ -185,7 +185,7 @@ The other message is: this is a dummy message
 ```
 
 This will make the jar package as a stand-alone app. Test it with:
-``` shell script
+``` bash session
 $ java -jar target/k8s-reload-config-0.0.1-SNAPSHOT.jar
 ```
 
