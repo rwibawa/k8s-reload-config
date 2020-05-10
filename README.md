@@ -8,7 +8,7 @@ The message can be changed using a config map.
 * [restdocs](https://docs.spring.io/spring-restdocs/docs/current/reference/html5/)
 * [spring-restdocs](https://github.com/spring-projects/spring-restdocs/blob/master/docs/src/docs/asciidoc/getting-started.adoc#setting-up-your-junit-5-tests)
 
-### 1. Add a k8s ConfigMap: 
+## 1. Add a k8s ConfigMap: 
 
 Create a yaml file with the following contents:
 
@@ -189,7 +189,7 @@ This will make the jar package as a stand-alone app. Test it with:
 $ java -jar target/k8s-reload-config-0.0.1-SNAPSHOT.jar
 ```
 
-#### 3. Run maven build *'clean package fabric8:build fabric8:helm'* with *kubernetes* profile:
+### 3. Run maven build *'clean package fabric8:build fabric8:helm'* with *kubernetes* profile:
 ![mvn kubernetes profile](images/kubernetes-mvn-profile.jpg)
 
 It will produce:
@@ -197,3 +197,6 @@ It will produce:
 
 * Untar the `target/k8s-reload-config-0.0.1-SNAPSHOT-helm.tar.gz` into *helm* folder.
 * Build the docker image and push it to the registry.
+
+## 4. spring-restdocs
+See the templates in `src/main/asciidoc/*.adoc`. The generated snippets are in `target/generated-snippets` and the generated docs are in `target/generated-docs`.

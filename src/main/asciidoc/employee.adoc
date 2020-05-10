@@ -1,5 +1,5 @@
 = Spring REST Docs WebTestClient Sample
-Andy Wilkinson;
+Ryan Wibawa;
 :doctype: book
 :icons: font
 :source-highlighter: highlightjs

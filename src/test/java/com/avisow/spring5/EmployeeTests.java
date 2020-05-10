@@ -29,7 +29,7 @@ import static org.springframework.restdocs.webtestclient.WebTestClientRestDocume
 class EmployeeTests {
 
 	@RegisterExtension
-	final RestDocumentationExtension restDocumentation = new RestDocumentationExtension("custom");
+	final RestDocumentationExtension restDocumentation = new RestDocumentationExtension();
 
 	private WebTestClient webTestClient;
 

@@ -24,7 +24,7 @@ import static org.springframework.restdocs.webtestclient.WebTestClientRestDocume
 class Spring5ApplicationTests {
 
 	@RegisterExtension
-	final RestDocumentationExtension restDocumentation = new RestDocumentationExtension ("custom");
+	final RestDocumentationExtension restDocumentation = new RestDocumentationExtension ();
 
 	private WebTestClient webTestClient;
 
@@ -58,7 +58,8 @@ class Spring5ApplicationTests {
 			.exchange()
 			// and use the dedicated DSL to test assertions against the response
 			.expectStatus().isOk()
-			.expectBody(String.class).isEqualTo("Hello, Spring!");
+			.expectBody(String.class).isEqualTo("Hello, Spring!")
+			.consumeWith(document("index"));
 	}
 
 }
